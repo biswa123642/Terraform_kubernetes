@@ -13,7 +13,7 @@ resource "aws_instance" "this" {
     distinct(compact(concat([var.subnet_id], var.subnet_ids))),
     count.index,
   )
-  key_name               = var.key_name
+  key_name               = testkey
   monitoring             = var.monitoring
   get_password_data      = var.get_password_data
   vpc_security_group_ids = var.vpc_security_group_ids
